@@ -49,7 +49,7 @@ namespace ConsoleAppClass
                 Console.WriteLine("A is Awesome, cos it equals {B}");
             }
 
-            //A > B ? "B" : "A";
+            string Result = (A > B) ? "B" : "A";
 
             if (A > B)
             {
@@ -106,6 +106,38 @@ namespace ConsoleAppClass
                 Salutation = "Allô";
             }
             Console.WriteLine(Salutation);
+
+            // shorthand method of if/else 
+            int time = 20;
+            string result = (time < 18) ? "Good day." : "Good evening.";  // if else       
+            Console.WriteLine(result);
+
+            // same as above
+            int time2 = 20;
+            string result2;
+            if (time2 < 18) // if else 
+            {
+                result2 = "Good day.";
+            }
+            else
+            {
+                result2 = "Good evening.";
+            }
+            Console.WriteLine(result2);
+
+            int day = 4;
+            switch (day)
+            {
+                case 6:
+                    Console.WriteLine("Today is Saturday.");
+                    break;
+                case 7:
+                    Console.WriteLine("Today is Sunday.");
+                    break;
+                default:
+                    Console.WriteLine("Looking forward to the Weekend.");
+                    break;
+            }
         }
     }
 }

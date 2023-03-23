@@ -86,6 +86,26 @@ namespace ConsoleAppClass
             //Console.WriteLine(3 < 2);
             //Console.WriteLine(3 == 2);
             //Console.WriteLine(3 <= 2);
+
+            // Salutation based on current time (hour) in UTC
+            string Salutation;
+            if (DateTime.UtcNow.Hour >= 0 && DateTime.UtcNow.Hour < 11)
+            {
+                Salutation = "Bonjour";
+            }
+            else if (DateTime.UtcNow.Hour >= 11 && DateTime.UtcNow.Hour < 15)
+            {
+                Salutation = "Bonsoir";
+            }
+            else if (DateTime.UtcNow.Hour >= 15 && DateTime.UtcNow.Hour < 20)
+            {
+                Salutation = "Salut";
+            }
+            else
+            {
+                Salutation = "Allô";
+            }
+            Console.WriteLine(Salutation);
         }
     }
 }
